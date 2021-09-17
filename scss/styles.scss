@@ -1,0 +1,245 @@
+@mixin display-flex($display,$flex-direction,$justify-content) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content:$justify-content
+}
+
+:root{
+    --animation-speed:300ms;
+}
+
+header{
+    @include display-flex(flex,row,space-between);
+    align-items: center;
+    background-color: #A8E6CF;
+    padding: 0 5px;
+    border-radius: 2px;
+}
+
+img{
+    width: 150px;
+    height: 60px;
+}
+
+.search-bar{
+    position: relative;
+    input{
+        padding: 5px 0;
+        width: 250px;
+        background-color: #DCEDC1;
+        border-radius: 5px;
+    }
+    i{
+        position: absolute;
+        top:7px;
+        left: 220px;
+    }
+}
+
+.content{
+    @include display-flex(flex,row,space-between);
+    margin-top:10px ;   
+}
+
+
+main{
+    width: 80%;
+    height: 500px;
+    @include display-flex(flex,row,center);
+    align-items: center;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    form{
+        width: 40%;
+        height: 90%;
+        .input-area{
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+         
+        }
+        .input-radio-area{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        button{
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .grid{
+        width: 60%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 5px;
+        justify-content: center;
+        align-items: center;
+
+        //grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        .grid-item{
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            margin: auto;
+       
+
+            .grid-image-area{
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px;
+
+                }
+            }
+            
+            .grid-content-area{
+
+                width: 150px;
+                h4{
+                    text-overflow: ellipsis;    
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+                p{
+                    
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;  
+                    overflow: hidden;
+                }
+            }
+
+            button{
+               font-weight: 700;
+                width: 100%;
+                background-color: #DCEDC1;
+
+            }
+        }
+    }
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.menu{
+    width: 35px;
+    height: 30px;
+    margin: 10px 20px;
+    cursor: pointer;
+
+    .bar{
+        height: 5px;
+        width: 100%;
+        background-color: #DCEDC1;
+        display: block;
+        border-radius: 5px;
+        transition: 0.3s ease;
+
+
+    }
+
+    #bar1{
+        transform: translateY(-4px);
+
+    }
+    #bar3{
+        transform: translateY(4px);
+    }        
+}
+
+.change .bar{
+    background-color: aliceblue;
+}
+
+.change #bar1{
+    transform: translateY(4px) rotate(-45deg);
+}
+
+.change #bar3{
+    transform: translateY(-6px) rotate(45deg);
+    
+}
+.change #bar2{
+    opacity: 0;
+}
+
+.nav li a{
+    color:#00B8A9;
+    font-size: large;
+    text-decoration: none;
+
+    
+    &:hover{
+        font-weight: bold;
+    }
+}
+
+
+.nav li{
+    list-style: none;
+    padding: 16px 0;
+}
+
+.nav{
+    padding: 0;
+    margin: 0 20px;
+    transition: 0.3s ease;
+    display: none;
+    
+}
+
+.nav-area{
+    position: relative;
+}
+.menu-bg #menu-bar{
+    top:0;
+    left:0;
+    position: absolute;
+}
+
+.menu-bg{
+    z-index: 1;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle,#DCEDC1,#FFAAA5);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+#menu-bar{
+    z-index: 2;
+    position: absolute;
+}
+
+.change-bg{
+    width: 550px;
+    height: 540px;
+    transform: translate(-55%,-30%);
+}
+
+.change{
+    display: block;
+    transition: 0.3s ease;
+}
+
+.change-tab{
+    display: none;
+}
+

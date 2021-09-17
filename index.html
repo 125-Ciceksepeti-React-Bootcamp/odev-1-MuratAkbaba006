@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patika</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="header">
+                <header id="header">
+                    <div class="logo">
+                        <img src="https://uploads-ssl.webflow.com/6097e0eca1e87557da031fef/609859a191abe5d64b17fed3_Patika%20logo.png" alt="">
+                    </div>
+                    <div class="search-bar">
+                        <input id="search-text" onkeyup="SearchInputChange()" type="text">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="profile">
+                        <i class="fas fa-user-circle fa-lg"></i>
+                    </div>
+                </header>
+            </div>
+        <div class="content">
+            <div class="nav-area">
+                <div id="menu-bar">
+                    <div class="menu" id="menu">
+                        <div id="bar1" class="bar"></div>
+                        <div id="bar2" class="bar"></div>
+                        <div id="bar3" class="bar"></div>
+                    </div>
+                    <ul class="nav" id="nav">
+                        <li><a id="cards" href="#">Cards</a></li>
+                        <li><a id="forms" href="#">Forms</a></li>
+                    </ul>
+                </div>
+                <div class="menu-bg" id="menu-bg"></div>
+            </div>
+            
+            <main>
+                
+                <form id="form" action="#">
+                    <div class="input-area">
+                        <label for="Company">Company:</label>
+                        <input id="company" type="text">
+                    </div>
+                     <div class="input-area">
+                        <label for="FirstName">FirstName:</label>
+                        <input id="first-name" type="text">
+                    </div>
+                     <div class="input-area">
+                        <label for="LastName">Last Name:</label>
+                        <input id="last-name" type="text">
+                    </div>
+                     <div class="input-area">
+                        <label for="email">Email:</label>
+                        <input id="email" type="email">
+                    </div>
+                     <div class="input-area">
+                        <label for="title">Title:</label>
+                        <input id="title" type="text">
+                    </div>
+                     <div class="input-area">
+                        <label for="phone">Phone:</label>
+                        <input id="phone" type="phone">
+                    </div>
+                    <div class="input-area">
+                        <label>Cancel Registration:</label>
+                        <input id="registration" type="checkbox">
+                    </div>
+                     <div class="input-area">
+                        <label>252 Training Session 2010:</label>
+                        <input id="date" type="date">
+                    </div>
+                     <div class="input-radio-area">
+                        <label>Job Function:</label>
+                        <div id="job">
+                        <input type="radio"  name="job_func" value="Campaign Management">
+                        <label for="html">Campaign Management</label><br>
+                        <input type="radio"  name="job_func" value="CRM Administration">
+                        <label for="css">CRM Administration</label><br>
+                        <input type="radio"  name="job_func" value="Email Deployment">
+                        <label for="javascript">Email Deployment</label><br>
+                        <input type="radio"  name="job_func" value="Partner">
+                        <label for="javascript">Partner</label><br>
+                        <input type="radio"  name="job_func" value="Employee">
+                        <label for="javascript">Employee</label><br>
+                        </div>
+                    </div>
+                     <div class="input-area">
+                        <label for="title">Dietary Requirements:</label>
+                        <input id="dietary" type="text">
+                    </div>
+                     <div class="input-area">
+                        <label for="title">Expectations:</label>
+                        <textarea  id="expectations" rows="4" cols="30"></textarea>
+                    </div>
+                    <button id="form_submit" type="submit" href="#">Gönder</button>
+                    
+                </form>
+                <div class="grid"></div>
+            </main>
+        </div>
+        </div>    
+    </div>
+
+</body>
+</html>
